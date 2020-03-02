@@ -16,6 +16,6 @@ public class BasicNavigation {
 //        RemoteWebDriver driver1 = new FirefoxDriver();
 //        RemoteWebDriver driver2 = new SafariDriver();
         //in selenium, everything starts from webdriver interface
-        driver.get("http://google.com");// is used to open website
+        driver.get("http://google.com");// is used to open website. now I will push to github
     }
 }
