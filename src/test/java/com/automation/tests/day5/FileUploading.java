@@ -22,7 +22,7 @@ public class FileUploading {
         String scoobie = "C:\\Users\\ziyod\\OneDrive\\Desktop\\59721be09d0918319c32a058.jfif";
         System.out.println(scoobie);
 
-        upload.sendKeys(filePath);
+        upload.sendKeys(scoobie);
         driver.findElement(By.id("file-submit")).click();
 
         BrowserUtils.wait(5);

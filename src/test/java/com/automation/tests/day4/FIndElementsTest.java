@@ -14,12 +14,23 @@ public class FIndElementsTest {
         WebDriver driver = new ChromeDriver();
         driver.get("http://practice.cybertekschool.com/");
         List<WebElement> links = driver.findElements(By.tagName("a"));
+
         for (WebElement link:links) {
             System.out.println(link.getText());
+            System.out.println(link.getAttribute("href"));
+            System.out.println();
+        }
+        for (int i = 1; i <links.size(); i++) {
+            links.get(i).click();
+           // Thread.sleep(500);
+            driver.navigate().back();
+           // Thread.sleep(500);
+            //we need to refresh list as when we navigate back list becomes old, therefore refresh is needed
+            links = driver.findElements(By.tagName("a"));
 
         }
 
-        Thread.sleep(3000);
+       // Thread.sleep(1000);
         driver.quit();
     }
 }
